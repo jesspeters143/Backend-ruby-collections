@@ -10,10 +10,12 @@ puts 'Give an ending year'
 end_year = gets.chomp.to_i
 puts ''
 
-while start_year.to_i <= end_year.to_i
-	if start_year.to_i % 4 == 0
+while start_year <= end_year
+	if (start_year % 4 == 0) && ! (start_year % 100 == 0)
 		puts start_year
-end
+	elsif start_year % 400 == 0
+		puts start_year
+    end
 
-start_year = start_year.to_i + 1
+    start_year = start_year + 1
 end
